@@ -1,0 +1,14 @@
+/* nav div ul li:hover a{
+    color:chartreuse;
+} */
+
+@media screen and (max-width: 1250px){
+    nav{
+        display: block;
+        padding: 0;
+    }
+    nav .icon{
+        display: inline-block;
+        padding: 15px 30px;
+    }
+}
