@@ -2,7 +2,7 @@
 
 ### Welcome to Zaykaa - Your Ultimate Food Ordering Website!
 
-Zaykaa is a delightful online food ordering platform that caters to your taste buds with a seamless and user-friendly experience. We offer a range of exceptional features to both our esteemed users and dedicated administrators, ensuring a rewarding and convenient journey for all.
+Zaykaa is a dynamic and mouth-watering Food Ordering Website crafted using the power of **MERN Stack Technology**. With a focus on creating a seamless user experience, Zaykaa offers a plethora of features that cater to both customers and administrators alike.
 
 #### Key Features:
 
