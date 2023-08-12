@@ -44,7 +44,7 @@
     ]
   },
   
-  "proxy": "food-ordering-web-application-iota.vercel.app",
+  "proxy": "https://food-ordering-web-application-iota.vercel.app",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
