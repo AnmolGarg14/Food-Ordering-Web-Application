@@ -12,7 +12,9 @@ function help() {
 
   const getValiduser = async () => {
     try {
-      const res = await axios.get("/users/profile");
+      const res = await axios.get(
+        "https://food-ordering-web-application-iota.vercel.app/users/profile"
+      );
       if (res) {
         setProfile({
           ...profile,

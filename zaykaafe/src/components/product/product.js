@@ -17,12 +17,16 @@ function product() {
   const [product, setProduct] = useState([]);
 
   const getProduct = async () => {
-    const res = await axios.get(`/item/getitem/${name}`);
+    const res = await axios.get(
+      `https://food-ordering-web-application-iota.vercel.app/item/getitem/${name}`
+    );
     setProduct(res.data.data);
   };
 
   const addtocart = async (_id) => {
-    const check = await axios.post(`/cart/addtocart/${_id}`);
+    const check = await axios.post(
+      `https://food-ordering-web-application-iota.vercel.app/cart/addtocart/${_id}`
+    );
     const data1 = check;
     console.log(data1);
 
@@ -41,7 +45,9 @@ function product() {
   const searchHandle = async (e) => {
     let key = e.target.value;
     if (key) {
-      let result = await axios.get(`/item/search/${key}`);
+      let result = await axios.get(
+        `https://food-ordering-web-application-iota.vercel.app/item/search/${key}`
+      );
       if (result) {
         setProduct(result.data);
       }

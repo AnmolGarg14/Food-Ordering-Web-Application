@@ -21,7 +21,8 @@ function Login() {
   const postdata = async (e) => {
     e.preventDefault();
     try {
-      const url = "/admin/adminlogin";
+      const url =
+        "https://food-ordering-web-application-iota.vercel.app/admin/adminlogin";
       const { data: res } = await axios.post(url, admin);
       localStorage.setItem("token1", res.data);
       window.location = "/admin/home";

@@ -15,7 +15,9 @@ function profile() {
 
   const getValiduser = async () => {
     try {
-      const res = await axios.get("/users/profile");
+      const res = await axios.get(
+        "https://food-ordering-web-application-iota.vercel.app/users/profile"
+      );
       if (res) {
         setProfile({
           ...profile,
@@ -40,12 +42,15 @@ function profile() {
     e.preventDefault();
 
     const { name, email, number, address } = profile;
-    const data = await axios.post("/users/updateprofile", {
-      name,
-      email,
-      number,
-      address,
-    });
+    const data = await axios.post(
+      "https://food-ordering-web-application-iota.vercel.app/users/updateprofile",
+      {
+        name,
+        email,
+        number,
+        address,
+      }
+    );
     if (!data) {
       console.log("Profile Not Updated");
     } else {
@@ -59,15 +64,19 @@ function profile() {
   };
 
   const deleteaccount = async () => {
-    axios.delete("/users/deleteaccount").then(() => {
-      localStorage.removeItem("token");
-      window.location = "/";
-      toast.error("Account Successfully Deleted", {
-        position: "top-right",
-        autoClose: 2000,
-        theme: "colored",
+    axios
+      .delete(
+        "https://food-ordering-web-application-iota.vercel.app/users/deleteaccount"
+      )
+      .then(() => {
+        localStorage.removeItem("token");
+        window.location = "/";
+        toast.error("Account Successfully Deleted", {
+          position: "top-right",
+          autoClose: 2000,
+          theme: "colored",
+        });
       });
-    });
   };
 
   useEffect(() => {

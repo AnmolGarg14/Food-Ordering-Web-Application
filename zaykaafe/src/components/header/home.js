@@ -7,7 +7,9 @@ import axios from "axios";
 const Home = () => {
   const handleLogout = async () => {
     localStorage.removeItem("token");
-    const res2 = await axios.get("/users/logout");
+    const res2 = await axios.get(
+      "https://food-ordering-web-application-iota.vercel.app/users/logout"
+    );
     if (res2.status !== 201) {
       console.log("error");
     } else {
@@ -20,7 +22,9 @@ const Home = () => {
   const { account, setAccount } = useContext(Logincontext);
 
   const getvaliduser = async () => {
-    const res = await axios.get("/users/validuser");
+    const res = await axios.get(
+      "https://food-ordering-web-application-iota.vercel.app/users/validuser"
+    );
     if (res.status !== 201) {
       console.log("error");
     } else {

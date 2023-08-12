@@ -14,7 +14,9 @@ function Cart() {
   const { account, setAccount } = useContext(Logincontext);
 
   const getcartdata = async () => {
-    const res = await axios.get("/cart/cartdetails");
+    const res = await axios.get(
+      "https://food-ordering-web-application-iota.vercel.app/cart/cartdetails"
+    );
 
     if (res.status !== 201) {
       console.log("error");
@@ -25,7 +27,9 @@ function Cart() {
 
   const removedata = async (_id) => {
     try {
-      const res = await axios.delete(`/cart/remove/${_id}`);
+      const res = await axios.delete(
+        `https://food-ordering-web-application-iota.vercel.app/cart/remove/${_id}`
+      );
       console.log(res);
       if (res.status === 400 || !res) {
         console.log("error");
@@ -50,7 +54,9 @@ function Cart() {
 
   const getValiduser = async () => {
     try {
-      const res = await axios.get("/users/profile");
+      const res = await axios.get(
+        "https://food-ordering-web-application-iota.vercel.app/users/profile"
+      );
       if (res) {
         setProfile({
           ...profile,
