@@ -128,7 +128,7 @@ function Dashboard() {
                     <Link to={`/category/${cate.name}`}>
                       <img
                         className="h-40 mb-4 mx-auto"
-                        src={`https://food-ordering-web-application-iota.vercel.app/uploads/${cate.imgpath}`}
+                        src={`/uploads/${cate.imgpath}`}
                         alt=""
                       />
                     </Link>
