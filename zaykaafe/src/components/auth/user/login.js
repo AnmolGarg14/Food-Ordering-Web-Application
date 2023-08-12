@@ -22,7 +22,8 @@ function Login() {
   const postdata = async (e) => {
     e.preventDefault();
     try {
-      const url = "/users/login";
+      const url =
+        "https://food-ordering-web-application-iota.vercel.app/users/login";
       const { data: res } = await axios.post(url, user);
       localStorage.setItem("token", res.data);
       console.log(res);

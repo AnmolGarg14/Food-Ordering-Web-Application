@@ -24,12 +24,15 @@ function updateitem() {
 
   const updateItem = () => {
     axios
-      .post(`/item/updateitem/${_id}`, {
-        _id,
-        name,
-        size,
-        price,
-      })
+      .post(
+        `https://food-ordering-web-application-iota.vercel.app/item/updateitem/${_id}`,
+        {
+          _id,
+          name,
+          size,
+          price,
+        }
+      )
       .then((response) => {
         console.log(response.data);
         window.location = "/viewitem";

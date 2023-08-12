@@ -9,7 +9,9 @@ const ForgotPassword = () => {
   const [error, setError] = useState("");
 
   const userValid = async () => {
-    const res = await axios.get(`/users/forgot-password/${_id}/${token}`);
+    const res = await axios.get(
+      `https://food-ordering-web-application-iota.vercel.app/users/forgot-password/${_id}/${token}`
+    );
     if (res.status === 201) {
       console.log("user valid");
     } else {
@@ -24,7 +26,10 @@ const ForgotPassword = () => {
   const sendpassword = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`/users/${_id}/${token}`, { password });
+      const res = await axios.post(
+        `https://food-ordering-web-application-iota.vercel.app/users/${_id}/${token}`,
+        { password }
+      );
 
       if (res.status === 201) {
         setPassword("");

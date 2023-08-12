@@ -94,7 +94,11 @@ function addcategory() {
       },
     };
 
-    const res = await axios.post("/category/addcategory", formData, config);
+    const res = await axios.post(
+      "https://food-ordering-web-application-iota.vercel.app/category/addcategory",
+      formData,
+      config
+    );
 
     if (res.data.status === 401 || !res.data) {
       console.log("errror");

@@ -24,12 +24,15 @@ function updatecategory() {
 
   const updateCategory = () => {
     axios
-      .post(`/category/updatecategory/${_id}`, {
-        _id,
-        name,
-        subname,
-        desc,
-      })
+      .post(
+        `https://food-ordering-web-application-iota.vercel.app/category/updatecategory/${_id}`,
+        {
+          _id,
+          name,
+          subname,
+          desc,
+        }
+      )
       .then((response) => {
         console.log(response.data);
         window.location = "/admin/home";

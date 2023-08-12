@@ -6,7 +6,9 @@ function Dashboard() {
   const [category, setCategory] = useState([]);
 
   const getCategory = async () => {
-    const response = await axios.get("/category/getcategory");
+    const response = await axios.get(
+      "https://food-ordering-web-application-iota.vercel.app/category/getcategory"
+    );
     console.log(response.data.data);
     setCategory(await response.data.data);
   };
@@ -24,9 +26,13 @@ function Dashboard() {
   };
 
   const onDelete = (_id) => {
-    axios.delete(`/category/deletecategory/${_id}`).then(() => {
-      getCategory();
-    });
+    axios
+      .delete(
+        `https://food-ordering-web-application-iota.vercel.app/category/deletecategory/${_id}`
+      )
+      .then(() => {
+        getCategory();
+      });
   };
 
   return (

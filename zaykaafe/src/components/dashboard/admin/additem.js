@@ -41,7 +41,11 @@ function additem() {
       },
     };
 
-    const res = await axios.post("/item/additem", formData, config);
+    const res = await axios.post(
+      "https://food-ordering-web-application-iota.vercel.app/item/additem",
+      formData,
+      config
+    );
 
     if (res.data.status === 401 || !res.data) {
       console.log("errror");

@@ -27,7 +27,8 @@ function Signup() {
   const PostData = async (e) => {
     e.preventDefault();
     try {
-      const url = "/users/register";
+      const url =
+        "https://food-ordering-web-application-iota.vercel.app/users/register";
       const { data: res } = await axios.post(url, user);
       // toast.success("Successfully Signed Up", {
       //   position: "top-right",

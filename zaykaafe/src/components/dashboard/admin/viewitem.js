@@ -13,7 +13,9 @@ function viewitem() {
   console.log(item);
 
   const getItem = async () => {
-    const res = await axios.get("/item/getitem");
+    const res = await axios.get(
+      "https://food-ordering-web-application-iota.vercel.app/item/getitem"
+    );
     // console.log("getdata");
     setItem(res.data.data);
   };
@@ -21,7 +23,9 @@ function viewitem() {
   const searchHandle = async (e) => {
     let key = e.target.value;
     if (key) {
-      let result = await axios.get(`/item/search/${key}`);
+      let result = await axios.get(
+        `https://food-ordering-web-application-iota.vercel.app/item/search/${key}`
+      );
       if (result) {
         setItem(result.data);
       }
@@ -44,9 +48,13 @@ function viewitem() {
   };
 
   const onDelete = (_id) => {
-    axios.delete(`/item/deleteitem/${_id}`).then(() => {
-      getItem();
-    });
+    axios
+      .delete(
+        `https://food-ordering-web-application-iota.vercel.app/item/deleteitem/${_id}`
+      )
+      .then(() => {
+        getItem();
+      });
   };
 
   return (

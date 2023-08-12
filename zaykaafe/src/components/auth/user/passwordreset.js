@@ -14,7 +14,10 @@ function Passwordreset() {
   const sendLink = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/users/sendpasswordlink", { email });
+      const res = await axios.post(
+        "https://food-ordering-web-application-iota.vercel.app/users/sendpasswordlink",
+        { email }
+      );
       if (res.status === 201) {
         setEmail("");
         setMessage(true);
